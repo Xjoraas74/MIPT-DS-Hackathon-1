@@ -8,9 +8,6 @@ print("Starting...")
 BOT_TOKEN = os.environ.get('BOT_TOKEN')
 bot = telebot.TeleBot(BOT_TOKEN)
 
-are_webhooks_dropped = bot.delete_webhook()
-print("Deleted webbhooks, status:", are_webhooks_dropped)
-
 model = pickle.load(open('grid_xgboost_params.sav', 'rb'))
 print('Model loaded')
 
